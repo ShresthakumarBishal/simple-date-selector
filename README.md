@@ -66,8 +66,8 @@ Use the initialize method to set pre-selected values for the year, month, and da
 
 #### Example:
 ```typescript
-dateSelector.initialize('2024'); // Only set the year
-dateSelector.initialize('2024', '02'); // Set the year and month
+dateSelector.initialize('2024'); // Only pre-select the year
+dateSelector.initialize('2024', '02'); // Only pre-select the year and month
 dateSelector.initialize('2024', '02', '07'); // Set the year, month, and day
 ```
 ---
@@ -187,7 +187,7 @@ dateSelector.initialize('2024', '02', '07');
 ---
 
 ## 7. How to Use?
-Here is demo full source code to use this library. 
+Here is demo full source code to use this library in HTML file. 
 
 ```html
 <!DOCTYPE html>
@@ -199,25 +199,24 @@ Here is demo full source code to use this library.
 </head>
 <body>
     <h1>Date Selector Test</h1>
-    <div class="form-container">
-        <div class="form-group">
-            <label for="year">Year:</label>
-            <select id="yearId">
-                <option value="">Select</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="month">Month:</label>
-            <select id="monthId" onclick="check()">
-                <option value="">Select</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="day">Day:</label>
-            <select id="dayId">
-                <option value="">Select</option>
-            </select>
-        </div>
+
+    <div class="date-section">
+
+        <label for="year">Year:</label>
+        <select id="yearId">
+            <option value="">Select</option>
+        </select>
+
+        <label for="month">Month:</label>
+        <select id="monthId" onclick="check()">
+            <option value="">Select</option>
+        </select>
+
+        <label for="day">Day:</label>
+        <select id="dayId">
+            <option value="">Select</option>
+        </select>
+
     </div>
 
     <!-- Include your bundled library -->
@@ -230,11 +229,13 @@ Here is demo full source code to use this library.
         dateSelector.addYears('2000', 'now');
 
         // Set pre-select values
-        dateSelector.initialize('2020', '7', '7');
+        dateSelector.initialize('2020', '09', '07');
     </script>
 </body>
 </html>
 ```
+### Demo Image
+<img src="src/bishal.png" alt="result" />
 
 ## 6. Contributing
 Contributions are welcome! To contribute:
