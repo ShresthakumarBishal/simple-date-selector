@@ -235,7 +235,7 @@ Here is demo full source code to use this library in HTML file.
 </html>
 ```
 ### Demo Image
-<img src="src/bishal.png" alt="result" />
+<img src="src/demo.png" alt="result" />
 
 ## 6. Contributing
 Contributions are welcome! To contribute:
