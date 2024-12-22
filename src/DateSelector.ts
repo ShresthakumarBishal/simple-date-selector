@@ -128,6 +128,13 @@ class DateSelector implements IDateSelector {
             if (defaultMonth)
                 console.error("ERROR: The month you provided '%s' is not available in the option of months.", defaultMonth);
             this.daySelectElement.appendChild(checkFirstOption(this.daySelectElement));
+            return;
+        }
+
+        if (!this.daySelectElement.value) {
+            if (defaultDay)
+                console.error("ERROR: The Day you provided '%s' is not available in the option of days.", defaultDay);
+            this.daySelectElement.appendChild(checkFirstOption(this.daySelectElement));
         }
     }
 
@@ -147,7 +154,7 @@ class DateSelector implements IDateSelector {
         // Populate year dropdown and clear all exist default option
         populateYearSelector(this.yearSelectElement, year, validateStartYear, validateEndYear);
 
-        
+
         
         // If a year is selected, populate month dropdown
         this.initialize(year);
