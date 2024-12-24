@@ -5,12 +5,11 @@
       "strict": true,                       // Enable all strict type-checking options
       "esModuleInterop": true,              // Enables emit interoperability between CommonJS and ES Modules
       "forceConsistentCasingInFileNames": true, // Ensure file names have consistent casing
-      "outDir": "./dist",                   // Output directory for compiled files
+      "outDir": "./lib",                   // Output directory for compiled files
       "declaration": true,                  // Generate .d.ts files for type definitions
       "sourceMap": true,                    // Generate source maps
       // "moduleResolution": "node"
     },
     "include": ["src/**/*"],                // Include all TypeScript files in the src directory
-    "exclude": ["node_modules", "dist"]     // Exclude these directories
-  }
-  
+    "exclude": ["node_modules", "lib"]     // Exclude these directories
+}
