@@ -1,14 +1,16 @@
 # DateSelector Documentation
 
 ## 1. Introduction
-`DateSelector` is a lightweight JavaScript/TypeScript library for managing date selection via dropdown menus. It simplifies the process of creating dynamic year, month, and day dropdowns, ensuring only valid date options are displayed based on user selections.
+<!-- `DateSelector` is a lightweight JavaScript/TypeScript library for managing date selection via dropdown menus. It simplifies the process of creating dynamic year, month, and day dropdowns, ensuring only valid date options are displayed based on user selections. -->
+
+DateSelector is a lightweight and efficient JavaScript/TypeScript library designed to simplify the process of creating dynamic date selection dropdowns.  It automatically updates the available year, month, and day options based on user selections, ensuring valid date choices. Perfect for forms and applications that require date inputs and user-friendly date selection.
 
 ### Key Features
 - Dynamically populate year, month, and day dropdowns.
 - Automatically adjusts the day options based on the selected month and year.
 - If the year is not selected, the month and day dropdown options will not display.
 - Day options are only displayed once a valid month and year are selected.
-- Month options are only displayed once a valid year is selected.
+- Fully customizable dropdown IDs and ranges.
 
 #### OnChange even
 
@@ -21,14 +23,15 @@
 ## 2. Installation
 
 ### Install via npm
+DateSelector can be easily installed via npm:
 ```bash
-npm install simple-date-selector
+npm i simple-date-selector
 ```
 
 ### Or use the built script directly in your project
-Directly include the library in your HTML file:
+Alternatively, you can include the library directly in your in your HTML file via a `<script>` tag:
 ```html
-<script src="dist/main.js"></script>
+<script src="https://unpkg.com/simple-date-selector@1.0.3/lib/index.js"></script>
 ```
 ---
 
@@ -53,7 +56,7 @@ const customDateSelector = new DateSelector();
 ``` -->
 ---
 
-*** Available Methods ***
+`*** Available Methods ***`
 
 ### `initialize(year, month, day)`
 
@@ -79,8 +82,8 @@ By default, the year dropdown will display options in the range from 1950 to the
 ***If you don’t want to change the range of the year dropdown, you do not need to use this method. ***
 
 #### Parameters:
-- `startYearOption` - The starting year for the dropdown range. Pass 'now' for currecnt Year.
-- `endYearOption` - The ending year for the dropdown range. Pass 'now' for currecnt Year.
+- `startYearOption` - The starting year for the dropdown option. Pass 'now' for currecnt Year.
+- `endYearOption` - The ending year for the dropdown option. Pass 'now' for currecnt Year.
 - `yearToSelect` - The year to pre-select (optional).
 
 #### Example:
@@ -123,7 +126,7 @@ Suppose you customize the IDs of the dropdown selectors like this:
 <select id="customMonthId"></select>
 <select id="customDayId"></select>
 ```
-To assign the custom IDs to the dropdown selectors, use the element method:
+To Assign the custom IDs of the dropdown selectors, use the element method:
 
 ```typescript
 dateSelector.element('customYearId', 'customMonthId', 'customDayId');
@@ -136,24 +139,28 @@ To set the first option of the dropdowns as a default, such as `Select Year`, 'S
 
 ```html
 <select id="customYearId">
-    <option>Select Yaer</option>
+    <option>Select Year</option>
 </select>
 
 <select id="customMonthId">
-    <option>Select Yaer</option>
+    <option>Select Month</option>
 </select>
 
 <select id="customDayId">
-    <option>Select Yaer</option>
+    <option>Select Day</option>
 </select>
 ```
+### `Demo Image`
+<img src="img/demo1.png" alt="result" />
+
+___
 
 ## 6. Complete Example
 
 ```typescript
 ************************** Assign custom IDs *****************************
 
-// Assign custom IDs to the year, month, and day dropdowns.
+// Assign custom IDs of the year, month, and day dropdowns.
 // If you are using year, month, and day as the IDs for the dropdowns,
 // you do not need to use this method.
 // Use element() method only when you have custome IDs
@@ -222,7 +229,7 @@ Here is demo full source code to use this library in HTML file.
     <!-- Include your bundled library -->
     <script src="./dist/date-selector.js"></script>
     <script>
-        // Assign custom IDs to the year, month, and day dropdowns.
+        // Assign custom IDs of the year, month, and day dropdowns.
         dateSelector.element('yearId', 'monthId', 'dayId');
 
         // Add a custom range yaers dropdowns
@@ -234,8 +241,10 @@ Here is demo full source code to use this library in HTML file.
 </body>
 </html>
 ```
-### Demo Image
-<img src="src/demo.png" alt="result" />
+### `Demo Image`
+<img src="img/demo.png" alt="result" />
+
+---
 
 ## 6. Contributing
 Contributions are welcome! To contribute:
@@ -248,4 +257,4 @@ Contributions are welcome! To contribute:
 ---
 
 ## 7. License
-This library is licensed under the MIT License. See the LICENSE file for more details.
+This library is licensed under the ISC License.
