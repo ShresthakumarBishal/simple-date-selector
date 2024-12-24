@@ -133,7 +133,7 @@ dateSelector.element('customYearId', 'customMonthId', 'customDayId');
 ```
 ---
 
-## 5. Set Custom Option as Default Selection
+## 4. Set Custom Option as Default Selection
 
 To set the first option of the dropdowns as a default, such as `Select Year`, 'Select Month', and `Select Day`, you can modify the HTML structure of the `<select>` elements. This will add a placeholder option at the top of each dropdown that will act as the default selection.
 
@@ -155,7 +155,7 @@ To set the first option of the dropdowns as a default, such as `Select Year`, 'S
 
 ___
 
-## 6. Complete Example
+## 5. Complete Example
 
 ```typescript
 ************************** Assign custom IDs *****************************
@@ -193,7 +193,7 @@ dateSelector.initialize('2024', '02', '07');
 ```
 ---
 
-## 7. How to Use?
+## 6. How to Use?
 Here is demo full source code to use this library in HTML file. 
 
 ```html
@@ -245,6 +245,18 @@ Here is demo full source code to use this library in HTML file.
 <img src="img/demo.png" alt="result" />
 
 ---
+
+## 7. LIVE DEMO 🕊️
+
+You can change the parameters of these two methods of the library, then click the "**Run Code**" button to see the result on the right side.
+
+### Methods:
+- `dateSelector.addYears('2000', '2030');`
+- `dateSelector.initialize('2020', '7', '7');`
+
+### For Live Demo: [Click ME](https://shresthakumarbishal.github.io/portfolio.github.io/editor)
+
+___
 
 ## 6. Contributing
 Contributions are welcome! To contribute:
